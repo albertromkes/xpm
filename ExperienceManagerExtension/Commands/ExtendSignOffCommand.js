@@ -1,7 +1,7 @@
 ﻿Type.registerNamespace("Community.Extensions");
 
 Community.Extensions.DetectEditModeCommand = function DetectEditModeCommand(selection, pipeline) {
-    Type.enableInterface(this, "Company.Extensions.DetectEditModeCommand");
+    Type.enableInterface(this, "Community.Extensions.DetectEditModeCommand");
     this.addInterface("Tridion.Cme.Command", ["DetectEditModeCommand"]);
 }
 
@@ -24,8 +24,8 @@ Community.Extensions.DetectEditModeCommand.prototype._execute = function DetectE
             //Check if parameter is still in the url. If so: remove it
             var returnUrl = new Uri(url);
           
-            returnUrl = returnUrl.deleteQueryParam(Company.Extensions.Constants.paramNameActiveInXpm);
-            returnUrl = returnUrl.addQueryParam(Company.Extensions.Constants.paramNameExitXpmEditor, true);
+            returnUrl = returnUrl.deleteQueryParam(Community.Extensions.Constants.paramNameActiveInXpm);
+            returnUrl = returnUrl.addQueryParam(Community.Extensions.Constants.paramNameExitXpmEditor, true);
             view.properties.lastKnownUrl = returnUrl.toString();            
         }
     }

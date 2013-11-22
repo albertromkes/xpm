@@ -1,4 +1,4 @@
-﻿Type.registerNamespace("Company.Extensions.Constants");
+﻿Type.registerNamespace("Community.Extensions.Constants");
 
-Company.Extensions.Constants.paramNameActiveInXpm = "ActiveInXpm";
-Company.Extensions.Constants.paramNameExitXpmEditor = "ExitXpmEditor";
+Community.Extensions.Constants.paramNameActiveInXpm = "ActiveInXpm";
+Community.Extensions.Constants.paramNameExitXpmEditor = "ExitXpmEditor";
