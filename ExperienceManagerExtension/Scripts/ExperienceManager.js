@@ -10,11 +10,11 @@ var onDisplayStarted = function () {
     var originalUrl = websiteFrameControl.src;
 
     //Delete the existing parameters (parameters from this extension only)
-    var originalUri = new Uri(originalUrl).deleteQueryParam(Company.Extensions.Constants.paramNameActiveInXpm);
-    originalUri = originalUri.deleteQueryParam(Company.Extensions.Constants.paramNameExitXpmEditor);
+    var originalUri = new Uri(originalUrl).deleteQueryParam(Community.Extensions.Constants.paramNameActiveInXpm);
+    originalUri = originalUri.deleteQueryParam(Community.Extensions.Constants.paramNameExitXpmEditor);
 
     //Construct new url with the querystring parameter added
-    var newUrl = originalUri.addQueryParam(Company.Extensions.Constants.paramNameActiveInXpm, "true");
+    var newUrl = originalUri.addQueryParam(Community.Extensions.Constants.paramNameActiveInXpm, "true");
     
     websiteFrameControl.src = newUrl;
 };
