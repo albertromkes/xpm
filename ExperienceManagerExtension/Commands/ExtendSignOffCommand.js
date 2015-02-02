@@ -14,13 +14,12 @@ Community.Extensions.DetectEditModeCommand.prototype._isAvailable = function Det
 };
 
 Community.Extensions.DetectEditModeCommand.prototype._execute = function DetectEditModeCommand$_execute(selection, pipeline) {
-    var w = window.parent || window;    
-    if (w && w.$display)
+    var applicationWindow = Tridion.getApplicationWindow();
+    if (applicationWindow.$display)
     {
-        var view = w.$display.getView();
+        var view = applicationWindow.$display.getView();
         if (view && view.getLastKnownUrl) {
             var url = view.getLastKnownUrl();
-            
             //Check if parameter is still in the url. If so: remove it
             var returnUrl = new Uri(url);
           
@@ -32,5 +31,4 @@ Community.Extensions.DetectEditModeCommand.prototype._execute = function DetectE
 
     //Continue with the default action
     pipeline.stop = false;
-
 };
